@@ -1,6 +1,7 @@
 import Container from 'components/container'
 import Hero from 'components/hero'
 import PostBody from 'components/post-body'
+import Contact from 'components/contact'
 
 const About = () => {
   return (
@@ -23,6 +24,8 @@ const About = () => {
           今までと違うものを作ることで愛着が湧いてきます。そこで興味を持ったことは小さなことでもいいから取り入れて、良いものを作れるようにしています。小さなヒントから新しいものを生み出すようなモノづくりは、これからも続けていきたいです。
         </p>
       </PostBody>
+
+      <Contact />
     </Container>
   )
 }
