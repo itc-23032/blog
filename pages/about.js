@@ -18,8 +18,8 @@ const About = () => {
         pageTitle='アバウト'
         pageDesc='About development activities'
         pagesImg={eyecatch.src}
-        pagesImg={eyecatch.width}
-        pagesImg={eyecatch.heigth}
+        pagesImgW={eyecatch.width}
+        pagesImgH={eyecatch.heigth}
       />
 
       <Hero title='About' subtitle='About development activities' />
