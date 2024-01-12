@@ -1,6 +1,6 @@
 import styles from 'styles/post-header.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faClock } from '@fortawewome/free-regular-svg-icons'
+import { faClock } from '@fortawesome/free-regular-svg-icons'
 const PostHeader = ({ title, subtitle, publish = '' }) => {
   return (
     <div className={styles.stack}>
