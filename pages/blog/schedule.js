@@ -1,17 +1,14 @@
 import { getPostBySlug } from 'lib/api'
 import Container from 'components/container'
-
-const Schedule = ({ 
-  title, 
-  publish, 
-  content, 
-  eyecatch, 
-  categories, 
-}) => {
+import PostHeader from 'components/post-header'
+const Schedule = ({ title, publish, content, eyecatch, categories }) => {
   return (
-    <container>
-      <h1>{title}</h1>
-    </container>
+    <Container>
+      <article>
+        <PostHeader title={title} subtitle='Blog Article' publish={publish} />
+      </article>
+    </Container>
+  )
 }
 
 export async function getSataticProps () {
@@ -25,7 +22,8 @@ export async function getSataticProps () {
       publish: post.publishDate,
       content: post.content,
       eyecatch: post.eyecatch,
-      categories: post.categories}
+      categories: post.categories
+    }
   }
 }
 
