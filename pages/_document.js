@@ -1,8 +1,11 @@
 import { Html, Head, Main, NextScript } from 'next/document'
 
-export default function Document() {
+import { siteMeta } from 'lib/constants'
+const { siteLang } = siteMeta
+
+const Document = () => {
   return (
-    <Html lang="en">
+    <Html lang={siteLang}>
       <Head />
       <body>
         <Main />
@@ -11,3 +14,5 @@ export default function Document() {
     </Html>
   )
 }
+
+export default Document
