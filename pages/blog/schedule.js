@@ -1,5 +1,6 @@
 import { getPostBySlug } from 'lib/api'
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { extractText } from 'lib/extract-text'
 import Meta from 'components/meta'
 import Container from 'components/container'
@@ -25,6 +26,11 @@ const Schedule = ({
   categories,
   description
 }) => {
+=======
+import Container from 'components/container'
+
+const Schedule = ({ title, publish, content, eyecatch, categories }) => {
+>>>>>>> chapter7
   return (
     <Container>
 <<<<<<< HEAD
@@ -66,7 +72,14 @@ const Schedule = ({
 =======
       <h1>{title}</h1>
     </Container>
+<<<<<<< HEAD
   }
+>>>>>>> chapter7
+=======
+  )
+}
+
+export default Schedule
 >>>>>>> chapter7
 
 export async function getStaticProps () {
@@ -83,6 +96,7 @@ export async function getStaticProps () {
       content: post.content,
       eyecatch: post.eyecatch,
 <<<<<<< HEAD
+<<<<<<< HEAD
       categories: post.categories,
       descriptionn: description
     }
@@ -91,6 +105,9 @@ export async function getStaticProps () {
       categories: post.categories}
   } 
 >>>>>>> chapter7
+=======
+      categories: post.categories
+    }
+  }
+>>>>>>> chapter7
 }
-
-export default Schedule
