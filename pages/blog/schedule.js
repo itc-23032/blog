@@ -1,6 +1,4 @@
 import { getPostBySlug } from 'lib/api'
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { extractText } from 'lib/extract-text'
 import Meta from 'components/meta'
 import Container from 'components/container'
@@ -14,9 +12,6 @@ import {
 import ConvertBody from 'components/convert-body'
 import PostCategories from 'components/post-categories'
 import Image from 'next/image'
-=======
-import Container from 'components/Container'
->>>>>>> chapter7
 
 const Schedule = ({
   title,
@@ -26,14 +21,10 @@ const Schedule = ({
   categories,
   description
 }) => {
-=======
-import Container from 'components/container'
 
 const Schedule = ({ title, publish, content, eyecatch, categories }) => {
->>>>>>> chapter7
   return (
     <Container>
-<<<<<<< HEAD
       <Meta
         pageTitle={title}
         pageDesc={description}
@@ -66,21 +57,13 @@ const Schedule = ({ title, publish, content, eyecatch, categories }) => {
           </TwoColumnSidebar>
         </TwoColumn>
       </article>
-    </Container>
   )
-}
-=======
       <h1>{title}</h1>
     </Container>
-<<<<<<< HEAD
-  }
->>>>>>> chapter7
-=======
   )
 }
 
 export default Schedule
->>>>>>> chapter7
 
 export async function getStaticProps () {
   const slug = 'schedule'
@@ -95,19 +78,8 @@ export async function getStaticProps () {
       publish: post.publishDate,
       content: post.content,
       eyecatch: post.eyecatch,
-<<<<<<< HEAD
-<<<<<<< HEAD
       categories: post.categories,
-      descriptionn: description
+      descriptionn: description,
     }
-  }
-=======
-      categories: post.categories}
   } 
->>>>>>> chapter7
-=======
-      categories: post.categories
-    }
-  }
->>>>>>> chapter7
 }
