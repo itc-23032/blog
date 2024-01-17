@@ -1,5 +1,5 @@
 import { getPostBySlug } from 'lib/api'
-import Container from 'components/container'
+import Container from 'components/Container'
 
 const Schedule = ({ 
   title, 
@@ -9,12 +9,12 @@ const Schedule = ({
   categories, 
 }) => {
   return (
-    <container>
+    <Container>
       <h1>{title}</h1>
-    </container>
-}
+    </Container>
+  }
 
-export async function getSataticProps () {
+export async function getStaticProps () {
   const slug = 'schedule'
 
   const post = await getPostBySlug(slug)
@@ -26,7 +26,7 @@ export async function getSataticProps () {
       content: post.content,
       eyecatch: post.eyecatch,
       categories: post.categories}
-  }
+  } 
 }
 
 export default Schedule
