@@ -1,4 +1,5 @@
 import { getPostBySlug } from 'lib/api'
+<<<<<<< HEAD
 import { extractText } from 'lib/extract-text'
 import Meta from 'components/meta'
 import Container from 'components/container'
@@ -12,6 +13,9 @@ import {
 import ConvertBody from 'components/convert-body'
 import PostCategories from 'components/post-categories'
 import Image from 'next/image'
+=======
+import Container from 'components/Container'
+>>>>>>> chapter7
 
 const Schedule = ({
   title,
@@ -23,6 +27,7 @@ const Schedule = ({
 }) => {
   return (
     <Container>
+<<<<<<< HEAD
       <Meta
         pageTitle={title}
         pageDesc={description}
@@ -58,8 +63,13 @@ const Schedule = ({
     </Container>
   )
 }
+=======
+      <h1>{title}</h1>
+    </Container>
+  }
+>>>>>>> chapter7
 
-export async function getSataticProps () {
+export async function getStaticProps () {
   const slug = 'schedule'
 
   const post = await getPostBySlug(slug)
@@ -72,10 +82,15 @@ export async function getSataticProps () {
       publish: post.publishDate,
       content: post.content,
       eyecatch: post.eyecatch,
+<<<<<<< HEAD
       categories: post.categories,
       descriptionn: description
     }
   }
+=======
+      categories: post.categories}
+  } 
+>>>>>>> chapter7
 }
 
 export default Schedule
