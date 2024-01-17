@@ -10,19 +10,22 @@ const Hero = ({ title, subtitle, imageOn = false }) => {
         <p className={styles.subtitle}>{subtitle}</p>
       </div>
       {imageOn && (
-        <figure className={styles.image}>
+        <figure>
+          {' '}
           <Image
             src={cube}
             alt=''
-            layout='responsive'
-            sizes='(min-width: 1152px) 576px, (min-width: 768px) 50vw, 100vw'
+            sizes='(min-width:1152px) 576px, (min-width:768px) 50vw, 100vw'
             priority
             placeholder='blur'
+            style={{
+              width: '100%',
+              height: 'auto'
+            }}
           />
         </figure>
       )}
     </div>
   )
 }
-
 export default Hero
