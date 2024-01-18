@@ -1,6 +1,4 @@
 import { getPostBySlug } from 'lib/api'
-import { extractText } from 'lib/extract-text'
-import Meta from 'components/meta'
 import Container from 'components/container'
 import PostHeader from 'components/post-header'
 import PostBody from 'components/post-body'
@@ -9,9 +7,11 @@ import {
   TwoColumnMain,
   TwoColumnSidebar
 } from 'components/two-column'
-import ConvertBody from 'components/convert-body'
-import PostCategories from 'components/post-categories'
 import Image from 'next/image'
+import PostCategories from 'components/post-categories'
+import ConvertBody from 'components/convert-body'
+import { extractText } from 'lib/extract-text'
+import Meta from 'components/meta'
 
 const Schedule = ({
   title,
@@ -21,8 +21,6 @@ const Schedule = ({
   categories,
   description
 }) => {
-
-const Schedule = ({ title, publish, content, eyecatch, categories }) => {
   return (
     <Container>
       <Meta
@@ -57,29 +55,24 @@ const Schedule = ({ title, publish, content, eyecatch, categories }) => {
           </TwoColumnSidebar>
         </TwoColumn>
       </article>
-  )
-      <h1>{title}</h1>
     </Container>
   )
 }
-
 export default Schedule
 
 export async function getStaticProps () {
   const slug = 'schedule'
 
   const post = await getPostBySlug(slug)
-
   const description = extractText(post.content)
-
   return {
     props: {
-      titel: post.title,
+      title: post.title,
       publish: post.publishDate,
       content: post.content,
       eyecatch: post.eyecatch,
       categories: post.categories,
-      descriptionn: description,
+      description: description
     }
-  } 
+  }
 }
