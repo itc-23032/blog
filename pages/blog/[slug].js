@@ -16,7 +16,7 @@ import ConvertBody from 'components/convert-body'
 import { extractText } from 'lib/extract-text'
 import Meta from 'components/meta'
 
-const Schedule = ({
+const Post = ({
   title,
   publish,
   content,
@@ -63,10 +63,17 @@ const Schedule = ({
     </Container>
   )
 }
-export default Schedule
+export default Post
 
-export async function getStaticProps () {
-  const slug = 'micro'
+export async function getStaticPaths () {
+  return {
+    paths: ['/blog/schedule', '/blog/music', '/blog/micro'],
+    fallback: false
+  }
+}
+
+export async function getStaticProps (context) {
+  const slug = context.params.slug
 
   const post = await getPostBySlug(slug)
   const description = extractText(post.content)
