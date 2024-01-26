@@ -1,11 +1,10 @@
 import { getAllPosts } from 'lib/api'
-import Meta from 'components/meta'
 import Container from 'components/container'
 import Hero from 'components/hero'
 import Posts from 'components/posts'
 import Pagination from 'components/pagination'
 import { getPlaiceholder } from 'plaiceholder'
-
+import Meta from 'components/meta'
 import { eyecatchLocal } from 'lib/constants'
 
 const Home = ({ posts }) => {
@@ -18,7 +17,6 @@ const Home = ({ posts }) => {
     </Container>
   )
 }
-
 export default Home
 
 export async function getStaticProps () {
